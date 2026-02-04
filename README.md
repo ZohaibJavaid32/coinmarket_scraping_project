@@ -57,3 +57,35 @@ DB_CONFIG = {
 }
 ```
 
+## 📁 Project Structure
+
+```
+coinmarketcap-scraper/
+│
+├── main.py                 # Main application entry point
+├── scraper.py             # Web scraping logic
+├── database.py            # SQL Server operations
+├── utils.py               # Utility functions (export, analysis)
+├── config.py              # Configuration settings
+├── setup_database.py      # Database setup script generator
+│
+├── requirements.txt       # Python dependencies
+├── README.md             # This file
+├── .gitignore            # Git ignore rules
+│
+└── fake_jobs.ipynb       # Jupyter Notebook for Beautiful Soup Practice.
+│
+└── coin_market_scrapper_selenium.ipynb      # Jupyter Notebook To scrape data from first page.
+│
+└── coin_market_scrapper_bs4.ipynb       # Jupyter Notebook to scrape data using bs4 (have limitations).
+```
+
+## 🎯 Usage
+
+### Basic Usage
+
+Scrape data and save to database:
+```bash
+python main.py
+```
+

@@ -7,6 +7,7 @@ This document describes the architecture of the CoinMarketCap Cryptocurrency Scr
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                        COINMARKETCAP SCRAPER SYSTEM                     │
 └─────────────────────────────────────────────────────────────────────────┘
+```mermaid
 flowchart TD
     A[main.py (Entry)] --> B[config.py (Settings)]
     A --> C[scraper.py (Scrape)]
@@ -14,4 +15,5 @@ flowchart TD
     C --> E[External Services]
     D --> F[SQL Server Database]
     F --> G[utils.py (Analysis, Optional)]
+
 

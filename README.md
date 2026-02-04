@@ -19,3 +19,17 @@ This project scrapes cryptocurrency data from [CoinMarketCap](https://coinmarket
 - SQL Server (Local or Remote)
 - ODBC Driver 17 for SQL Server (or SQL Server driver)
 
+## 🔧 Installation
+
+### 1. Clone or Download the Repository
+
+```bash
+cd coinmarketcap_scraping_project
+```
+
+### 2. Install Python Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+

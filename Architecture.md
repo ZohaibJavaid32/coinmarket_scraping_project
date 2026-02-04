@@ -4,9 +4,9 @@ This document describes the architecture of the CoinMarketCap Cryptocurrency Scr
 
 ## 🏗️ Component Architecture
 
-                                     ┌─────────────────────────────────────────────────────────────────────────┐
-│                        COINMARKETCAP SCRAPER SYSTEM                     │
-└─────────────────────────────────────────────────────────────────────────┘
+    ┌─────────────────────────────────────────────────────────────────────────┐
+    │                        COINMARKETCAP SCRAPER SYSTEM                     │
+    └─────────────────────────────────────────────────────────────────────────┘
 
                                     ┌──────────────┐
                                     │   main.py    │

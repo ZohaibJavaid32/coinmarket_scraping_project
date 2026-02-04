@@ -4,17 +4,28 @@ This document describes the architecture of the CoinMarketCap Cryptocurrency Scr
 
 ## 🏗️ Component Architecture
 
-```mermaid
-flowchart TD
-    subgraph Entry ["COINMARKETCAP SCRAPER SYSTEM"]
-        direction TB
-        A["main.py (Entry)"] --> B["config.py (Settings)"]
-        A --> C["scraper.py (Scrape)"]
-        A --> D["database.py (Store)"]
-        C --> E["External Services"]
-        D --> F["SQL Server Database"]
-        F --> G["utils.py (Analysis, Optional)"]
-    end
+                                          
+                                          
+                                          
+                                          
+                                          
+     ┌─────────────────────────────────┐  
+     │                                 │  
+     │  Coin Market Scrapper Project   │  
+     │                                 │  
+     └─────────────────────────────────┘  
+                                          
+                                          
+                                          
+                                          
+            ┌──────────────────────┐      
+            │                      │      
+            │       main.py        │      
+            │    (Entry Point)     │      
+            └──────────────────────┘      
+                                          
+                                          
+                                          
 
 
 

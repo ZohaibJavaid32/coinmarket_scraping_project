@@ -32,3 +32,28 @@ cd coinmarketcap_scraping_project
 pip install -r requirements.txt
 ```
 
+### 3. Setup SQL Server Database
+
+**Option A: Using SQL Server Management Studio (SSMS)**
+1. Open SSMS and connect to your SQL Server instance
+2. Run the `setup_database.py` file to generate queries.
+
+**Option B: Automatic Setup**
+The application will automatically create the table when you first run it (DB must exist in SQL Server).
+
+
+
+### 4. Configure Database Connection
+
+Edit `config.py` and update the `DB_CONFIG` section:
+
+```python
+DB_CONFIG = {
+    'server': 'localhost',  # or '.\SQLEXPRESS' or IP address
+    'database': 'CryptoData',
+    'username': '',  # Leave empty for Windows Authentication
+    'password': '',  # Leave empty for Windows Authentication
+    'driver': '{ODBC Driver 17 for SQL Server}'
+}
+```
+

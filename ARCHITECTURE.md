@@ -123,7 +123,7 @@ This document describes the architecture of the CoinMarketCap Cryptocurrency Scr
        │ 2. Call Scraper
        ▼
 ┌─────────────────────────────────────────────────────────┐
-│              scraper.py - scrape_coinmarketcap()        │
+│      scraper.py - scrape_coinmarketcap_all_pages()      │
 │                                                         │
 │  ┌────────────────────────────────────────────────┐    │
 │  │ 1. get_chrome_driver()                         │    │

@@ -4,9 +4,7 @@ This document describes the architecture of the CoinMarketCap Cryptocurrency Scr
 
 ## 🏗️ Component Architecture
 
-┌─────────────────────────────────────────────────────────────────────────┐
-│                        COINMARKETCAP SCRAPER SYSTEM                     │
-└─────────────────────────────────────────────────────────────────────────┘
+```mermaid
 flowchart TD
     subgraph Entry ["COINMARKETCAP SCRAPER SYSTEM"]
         direction TB
@@ -17,6 +15,7 @@ flowchart TD
         D --> F["SQL Server Database"]
         F --> G["utils.py (Analysis, Optional)"]
     end
+
 
 
 

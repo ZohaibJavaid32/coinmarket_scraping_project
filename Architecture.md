@@ -7,32 +7,11 @@ This document describes the architecture of the CoinMarketCap Cryptocurrency Scr
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                        COINMARKETCAP SCRAPER SYSTEM                     │
 └─────────────────────────────────────────────────────────────────────────┘
+flowchart TD
+    A[main.py (Entry)] --> B[config.py (Settings)]
+    A --> C[scraper.py (Scrape)]
+    A --> D[database.py (Store)]
+    C --> E[External Services]
+    D --> F[SQL Server Database]
+    F --> G[utils.py (Analysis, Optional)]
 
-                                    ┌──────────────┐
-                                    │   main.py    │
-                                    │   (Entry)    │
-                                    └──────┬───────┘
-                                           │
-                        ┌──────────────────┼──────────────────┐
-                        │                  │                  │
-                        ▼                  ▼                  ▼
-                 ┌──────────┐      ┌──────────┐      ┌──────────┐
-                 │ config.py│      │scraper.py│      │database.py│
-                 │(Settings)│      │  (Scrape)│      │  (Store)  │
-                 └──────────┘      └─────┬────┘      └─────┬─────┘
-                                         │                  │
-                        ┌────────────────┘                  │
-                        │                                   │
-                        ▼                                   ▼
-            ┌───────────────────────┐         ┌────────────────────────┐
-            │   External Services   │         │   SQL Server Database  │
-            ├───────────────────────┤         ├────────────────────────┤
-            │  • CoinMarketCap Web  │         │  • CryptoData DB       │
-            │  • Chrome WebDriver   │         │  • CryptoCurrency Tbl  │
-            └───────────────────────┘         └────────────────────────┘
-
-                                    ┌──────────────┐
-                                    │   utils.py   │
-                                    │  (Analysis)  │
-                                    │   Optional   │
-                                    └──────────────┘

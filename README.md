@@ -9,7 +9,6 @@ This project scrapes cryptocurrency data from [CoinMarketCap](https://coinmarket
 - **Data Export**: Export data to CSV or Excel formats
 - **Data Analysis**: Built-in functions for top gainers/losers analysis
 - **Logging**: Comprehensive logging for debugging and monitoring
-- **CLI Interface**: Command-line arguments for flexible operation
 - **Error Handling**: Robust error handling and recovery
 
 ## 📋 Requirements

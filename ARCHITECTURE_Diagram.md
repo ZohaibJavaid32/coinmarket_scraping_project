@@ -1,3 +1,4 @@
+```mermaid
 flowchart LR
     A[Start] --> B[get_chrome_driver]
     B --> C[Open CoinMarketCap URL]
@@ -7,3 +8,4 @@ flowchart LR
     F --> G{More Pages?}
     G -->|Yes| C
     G -->|No| H[Return crypto_data]
+```

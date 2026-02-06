@@ -1,3 +1,4 @@
+```mermaid
 flowchart TD
     A[Start] --> B[get_chrome_driver()]
     B --> C[scrape_coinmarketcap / scrape_coinmarketcap_all_pages]
@@ -8,3 +9,5 @@ flowchart TD
     G --> H{More Pages?}
     H -->|Yes| D
     H -->|No| I[Return crypto_data]
+```
+

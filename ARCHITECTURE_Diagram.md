@@ -1,5 +1,4 @@
 ```mermaid
-%%{init: {'themeVariables': { 'background': '#ffffff', 'primaryColor': '#f9f9f9', 'edgeLabelBackground':'#ffffff', 'nodeBorder':'#000000', 'textColor':'#000000'}}}%%
 
 flowchart TD
     A(Run Scraper.py) --> B[get_chrome_driver]

@@ -1,4 +1,12 @@
 ```mermaid
+%%{init: {'theme': 'base', 'themeVariables': {
+  'primaryColor': '#E8F0FE',
+  'primaryTextColor': '#000000',
+  'primaryBorderColor': '#B6C7E2',
+  'lineColor': '#8FAADC',
+  'secondaryColor': '#F3F7FD',
+  'tertiaryColor': '#FFFFFF'
+}}%%
 flowchart TD
     A[Start] --> B[Get Chrome Driver]
     B --> C[Scrape CoinMarketCap]
@@ -10,5 +18,3 @@ flowchart TD
     H -->|Yes| D
     H -->|No| I[Return Crypto Data]
 ```
-
-

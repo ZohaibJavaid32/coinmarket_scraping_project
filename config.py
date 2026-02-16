@@ -11,7 +11,7 @@ EXPLICIT_TIME_WAITOUT = 10
 
 # SQL Server Configuration
 DB_CONFIG = {
-    'server': 'localhost',  
+    'server': 'ZOHAIB\SQLEXPRESS01',  
     'database': 'CryptoData',  
     'username': '',  
     'password': '', 

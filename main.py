@@ -30,7 +30,7 @@ def main():
         logger.info("Starting Cryptocurrency Scrapping....")
 
         # Pass the Number of Pages to Scrape from Crypto Market Website
-        crypto_data = scrape_coinmarketcap_all_pages(2)
+        crypto_data = scrape_coinmarketcap_all_pages(5)
         if not crypto_data:
             logger.error("Failed to Scrape Data")
             return

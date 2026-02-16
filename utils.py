@@ -102,6 +102,50 @@ def export_to_excel(filename: str = 'crypto_data.xlsx' , limit: Optional[int] = 
         logger.warning(f"Error Exporting data {e}.")
         return False
 
+def get_top_gainers(limit: int = 10) -> pd.DataFrame:
+    """
+    Get top gaining cryptocurrencies based on 24h change.
+    
+    Args:
+        limit: Number of top gainers to retrieve
+        
+    Returns:
+        pandas DataFrame with top gainers
+    """
+    query = f"""
+    SELECT TOP ({limit})
+        rank, name, price, twenty_four_hour_change as '24h_change',
+        market_cap, volume_24h
+    FROM {TABLE_NAME}
+    WHERE scraped_at = (SELECT MAX(scraped_at) FROM {TABLE_NAME})
+        AND twenty_four_hour_change NOT LIKE '%-%'
+    ORDER BY 
+        CAST(REPLACE(REPLACE(twenty_four_hour_change, '%', ''), '+', '') AS FLOAT) DESC
+    """
+    return query_to_dataframe(query)
+
+
+def get_top_losers(limit: int = 10) -> pd.DataFrame:
+    """
+    Get top losing cryptocurrencies based on 24h change.
+    
+    Args:
+        limit: Number of top losers to retrieve
+        
+    Returns:
+        pandas DataFrame with top losers
+    """
+    query = f"""
+    SELECT TOP ({limit})
+        rank, name, price, twenty_four_hour_change as '24h_change',
+        market_cap, volume_24h
+    FROM {TABLE_NAME}
+    WHERE scraped_at = (SELECT MAX(scraped_at) FROM {TABLE_NAME})
+        AND twenty_four_hour_change LIKE '%-%'
+    ORDER BY 
+        CAST(REPLACE(REPLACE(twenty_four_hour_change, '%', ''), '-', '') AS FLOAT) DESC
+    """
+    return query_to_dataframe(query)
 
 
 def search_crypto(name:str)-> pd.DataFrame:

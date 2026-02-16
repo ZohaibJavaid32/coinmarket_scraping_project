@@ -123,7 +123,11 @@ This document describes the architecture of the CoinMarketCap Cryptocurrency Scr
        │ 2. Call Scraper
        ▼
 ┌─────────────────────────────────────────────────────────┐
+<<<<<<< HEAD
 │         scraper.py - scrape_coinmarketcap_all_pages()   │
+=======
+│      scraper.py - scrape_coinmarketcap_all_pages()      │
+>>>>>>> c7548e0704ef6a05d382353d0aafa28b2e7199dd
 │                                                         │
 │  ┌────────────────────────────────────────────────┐    │
 │  │ 1. get_chrome_driver()                         │    │
@@ -436,33 +440,9 @@ Try-Catch Blocks at Multiple Levels:
 5. **Error Handling**: Try-except-finally at all levels
 6. **Logging Strategy**: Comprehensive logging throughout
 
----
 
-## 📈 Scalability Considerations
 
-```
-Current Design:        Future Enhancements:
 
-┌──────────────┐      ┌──────────────────────┐
-│ Single       │      │ Multi-threaded       │
-│ Execution    │ -->  │ Scraping             │
-└──────────────┘      └──────────────────────┘
-
-┌──────────────┐      ┌──────────────────────┐
-│ Manual       │      │ Scheduled Jobs       │
-│ Execution    │ -->  │ (Cron/Task Scheduler)│
-└──────────────┘      └──────────────────────┘
-
-┌──────────────┐      ┌──────────────────────┐
-│ Direct DB    │      │ API Layer +          │
-│ Access       │ -->  │ Database             │
-└──────────────┘      └──────────────────────┘
-
-┌──────────────┐      ┌──────────────────────┐
-│ Log Files    │      │ Monitoring Dashboard │
-│ Only         │ -->  │ + Alerts             │
-└──────────────┘      └──────────────────────┘
-```
 
 ---
 
